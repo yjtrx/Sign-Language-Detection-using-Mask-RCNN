@@ -7,8 +7,11 @@ The codes are based on implementation of Mask R-CNN by (https://github.com/matte
 The repository includes:
 
 Source code of Mask R-CNN built on FPN and ResNet101.
+
 Instruction and training code for the ASL dataset.
+
 Pre-trained weights on MS COCO.
+
 Jupyter notebooks to visualize the detection result.
 
 # Training on your own dataset
