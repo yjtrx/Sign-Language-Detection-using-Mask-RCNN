@@ -58,7 +58,7 @@ class GestureConfig(Config):
 class GestureDataset(utils.Dataset):
 
     def load_gesture(self, dataset_dir, subset):
-        """Load a subset of the Balloon dataset.
+        """Load a subset of the ASL dataset.
         dataset_dir: Root directory of the dataset.
         subset: Subset to load: train or val
         """
@@ -111,7 +111,7 @@ class GestureDataset(utils.Dataset):
 
         # Load annotations
         # VGG Image Annotator saves each image in the form:
-        # { 'filename': '28503151_5b5b7ec140_b.jpg',
+        # { 'filename': '81.jpg',
         #   'regions': {
         #       '0': {
         #           'region_attributes': {},
@@ -162,7 +162,7 @@ class GestureDataset(utils.Dataset):
             one mask per instance.
         class_ids: a 1D array of class IDs of the instance masks.
         """
-        # If not a balloon dataset image, delegate to parent class.
+        # If not a ASL dataset image, delegate to parent class.
         image_info = self.image_info[image_id]
         if image_info["source"] != "ASL":
             return super(self.__class__, self).load_mask(image_id)
